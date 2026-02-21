@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Marks Report</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+background:linear-gradient(135deg,#1e3c72,#2a5298);
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+color:#fff;
+}
+
+.container{
+width:100%;
+max-width:1000px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+h1{
+text-align:center;
+margin-bottom:25px;
+font-weight:700;
+letter-spacing:1px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+overflow:hidden;
+border-radius:15px;
+}
+
+thead{
+background:#ffffff;
+color:#333;
+}
+
+thead th{
+padding:15px;
+font-weight:600;
+text-align:center;
+}
+
+tbody tr{
+background:rgba(255,255,255,0.12);
+transition:0.3s;
+}
+
+tbody tr:hover{
+background:rgba(255,255,255,0.25);
+transform:scale(1.01);
+}
+
+tbody td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.grade-a{
+color:#00ffae;
+font-weight:600;
+}
+
+.grade-b{
+color:#ffd700;
+font-weight:600;
+}
+
+.grade-c{
+color:#ff9800;
+font-weight:600;
+}
+
+.grade-f{
+color:#ff4d4d;
+font-weight:600;
+}
+
+@media(max-width:768px){
+table, thead, tbody, th, td, tr{
+display:block;
+}
+
+thead{
+display:none;
+}
+
+tbody tr{
+margin-bottom:15px;
+border-radius:10px;
+padding:10px;
+}
+
+tbody td{
+text-align:right;
+padding-left:50%;
+position:relative;
+}
+
+tbody td::before{
+position:absolute;
+left:15px;
+width:45%;
+white-space:nowrap;
+font-weight:600;
+text-align:left;
+}
+
+tbody td:nth-of-type(1)::before{content:"Student Name";}
+tbody td:nth-of-type(2)::before{content:"Math";}
+tbody td:nth-of-type(3)::before{content:"Science";}
+tbody td:nth-of-type(4)::before{content:"English";}
+tbody td:nth-of-type(5)::before{content:"Total";}
+tbody td:nth-of-type(6)::before{content:"Grade";}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Student Marks Report</h1>
+
+<table>
+<thead>
+<tr>
+<th>Student Name</th>
+<th>Math</th>
+<th>Science</th>
+<th>English</th>
+<th>Total</th>
+<th>Grade</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Anitha</td>
+<td>95</td>
+<td>92</td>
+<td>88</td>
+<td>275</td>
+<td class="grade-a">A+</td>
+</tr>
+
+<tr>
+<td>Rahul</td>
+<td>85</td>
+<td>78</td>
+<td>80</td>
+<td>243</td>
+<td class="grade-b">B+</td>
+</tr>
+
+<tr>
+<td>Karthik</td>
+<td>70</td>
+<td>65</td>
+<td>72</td>
+<td>207</td>
+<td class="grade-c">C</td>
+</tr>
+
+<tr>
+<td>Meena</td>
+<td>50</td>
+<td>45</td>
+<td>55</td>
+<td>150</td>
+<td class="grade-f">F</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+</body>
+</html>
